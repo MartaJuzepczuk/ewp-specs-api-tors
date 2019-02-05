@@ -1,0 +1,32 @@
+<unbounded-tors-index-response
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/index-response.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+         https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/index-response.xsd
+         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/master/endpoints/index-response.xsd">
+
+    <tor-info>
+        <tor-id>16987hed-283d-5474-fs85-123s5df423d5d</tor-id>
+        <sending-hei-id>demo.usos.edu.pl</sending-hei-id>
+        <receiving-academic-year-id>2018/2019</receiving-academic-year-id>
+        <student>
+            <given-names>Jan Łukasz</given-names>
+            <family-name>Kowalski</family-name>
+            <birth-date>1995-05-05</birth-date>
+            <gender>1</gender>
+        </student>
+    </tor-info>
+
+    <tor-info>
+        <tor-id>nnk239fs-9711-x3fd-f235-5223557f2fgs3</tor-id>
+        <sending-hei-id>demo.usos.edu.pl</sending-hei-id>
+        <receiving-academic-year-id>2018/2019</receiving-academic-year-id>
+        <student>
+            <given-names>Katarzyna</given-names>
+            <family-name>Nowak</family-name>
+            <birth-date>1999-10-12</birth-date>
+            <gender>2</gender>
+        </student>
+    </tor-info>
+
+</unbounded-tors-index-response>

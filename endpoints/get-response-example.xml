@@ -1,0 +1,15 @@
+<unbounded-tors-get-response
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/get-response.xsd"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/get-response.xsd
+        https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/master/endpoints/get-response.xsd">
+
+    <tor>
+        <tor-id>16987hed-283d-5474-fs85-123s5df423d5d</tor-id>
+        <elmo xmlns="https://github.com/emrex-eu/elmo-schemas/tree/v1">
+            <!-- TODO -->
+        </elmo>
+    </tor>
+
+</unbounded-tors-get-response>

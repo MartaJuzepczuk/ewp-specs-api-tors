@@ -1,0 +1,137 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:ewp="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
+    xmlns:trm="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1"
+    elementFormDefault="qualified"
+
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/index-response.xsd"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/index-response.xsd">
+
+    <xs:import
+        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-architecture/stable-v1/common-types.xsd"
+        namespace="https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd" />
+
+    <xs:import
+        schemaLocation="https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-types-academic-term/stable-v1/schema.xsd"
+        namespace="https://github.com/erasmus-without-paper/ewp-specs-types-academic-term/tree/stable-v1" />
+
+    <xs:annotation>
+        <xs:documentation>
+            This schema is a part of the Erasmus Without Paper project. Before you start using it, make
+            sure you have read the general rules described here:
+
+            http://developers.erasmuswithoutpaper.eu/
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:element name="unbounded-tors-index-response">
+        <xs:annotation>
+            <xs:documentation>
+                This describes the format of the response returned by the `index` endpoint of EWP
+                Unbounded Transcripts of Records API.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tor-info" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                            This represents a piece of information on a single transcript of records.
+                        </xs:documentation>
+                    </xs:annotation>
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="tor-id" type="ewp:AsciiPrintableIdentifier" minOccurs="1"
+                                maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Identifier of the transcript (as assigned by the receiving HEI).
+                                        Immutable.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="sending-hei-id" type="xs:string" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The SCHAC ID of the sending HEI - the home institution of the
+                                        student for whom the transcript was issued. Immutable.
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="receiving-academic-year-id" type="trm:AcademicYearId"
+                                minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        Academic year during which the mobility took place
+
+                                        Note, that
+                                        sending and receiving HEIs MAY use different academic year identifiers (e.g.
+                                        "2010/2011" vs. "2010/2010" or "2011/2011"). This particular identifier is the
+                                        year identifier at the *receiving* HEI, not the sending HEI.
+
+                                        This means that the
+                                        sending HEI MUST know how the receiving HEI identifies its academic years (i.e.
+                                        whether it lies on the northern or southern hemisphere).
+                                    </xs:documentation>
+                                </xs:annotation>
+                            </xs:element>
+                            <xs:element name="student" minOccurs="1" maxOccurs="1">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        The section describes the student for whom the transcript was
+                                        issued.
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="given-names" type="ewp:StringWithOptionalLang"
+                                            minOccurs="1" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    The given names of the person.
+
+                                                    It MAY be specified in
+                                                    multiple languages (and/or multiple alphabets), as it has been
+                                                    explained in the `contact` element:
+                                                    https://github.com/erasmus-without-paper/ewp-specs-types-contact
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="family-name" type="ewp:StringWithOptionalLang"
+                                            minOccurs="1" maxOccurs="unbounded">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    The family name of the person.
+
+                                                    It MAY be specified in
+                                                    multiple languages (and/or multiple alphabets), as it has been
+                                                    explained in the `contact` element:
+                                                    https://github.com/erasmus-without-paper/ewp-specs-types-contact
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="birth-date" type="xs:date" minOccurs="0"
+                                            maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    RECOMMENDED. Date of birth.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                        <xs:element name="gender" type="ewp:Gender" minOccurs="0"
+                                            maxOccurs="1">
+                                            <xs:annotation>
+                                                <xs:documentation>
+                                                    Code of the gender.
+                                                </xs:documentation>
+                                            </xs:annotation>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
