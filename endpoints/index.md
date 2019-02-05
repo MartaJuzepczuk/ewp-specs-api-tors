@@ -1,4 +1,4 @@
-Unbounded ToRs Index endpoint
+Transcripts of Records Index endpoint
 =====================================
 
 * [What is the status of this document?][statuses]

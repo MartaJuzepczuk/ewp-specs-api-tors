@@ -1,5 +1,5 @@
-Unbounded Transcripts of Records API
-====================================
+Transcripts of Records API
+==========================
 
 * [What is the status of this document?][statuses]
 * [See the index of all other EWP Specifications][develhub]
@@ -8,7 +8,7 @@ Unbounded Transcripts of Records API
 Summary
 -------
 
-This document describes the **Unbounded Transcripts of Records API**.
+This document describes the **Transcripts of Records API**.
 This API is implemented by the receiving institution. It allows the sending
 institution to retrieve Transcripts of Records issued by the receiving
 institution.

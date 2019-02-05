@@ -4,8 +4,8 @@
     xmlns:sec="https://github.com/erasmus-without-paper/ewp-specs-sec-intro/tree/stable-v2"
     elementFormDefault="qualified"
 
-    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/manifest-entry.xsd"
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/manifest-entry.xsd">
+    targetNamespace="https://github.com/erasmus-without-paper/ewp-specs-api-tors/blob/stable-v1/manifest-entry.xsd"
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-tors/blob/stable-v1/manifest-entry.xsd">
 
     <!-- TODO: Once released, fix all schemaLocations pointing to its master branch. -->
 
@@ -26,13 +26,13 @@
         </xs:documentation>
     </xs:annotation>
 
-    <xs:element name="unbounded-tors">
+    <xs:element name="tors">
         <xs:annotation>
             <xs:documentation>
                 If this element is present in EWP Host's manifest file, then the host states that it
-                implements the Unbounded Transcripts of Records API described here:
+                implements the Transcripts of Records API described here:
 
-                https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors
+                https://github.com/erasmus-without-paper/ewp-specs-api-tors
             </xs:documentation>
         </xs:annotation>
         <xs:complexType>
@@ -79,14 +79,14 @@
                             <xs:annotation>
                                 <xs:documentation>
                                     If this element is present, then the EWP Host states, that it has
-                                    implemented a Notification Sender for Unbounded ToR objects - it will *try* to
-                                    deliver notifications to all Unbounded ToR CNR APIs implemented throughout the EWP
-                                    Network whenever related ToRs are updated.
+                                    implemented a Notification Sender for ToR objects - it will *try* to deliver
+                                    notifications to all ToR CNR APIs implemented throughout the EWP Network whenever
+                                    related ToRs are updated.
 
-                                    It is HIGHLY RECOMMENDED for all EWP Hosts
-                                    to implement this feature. If it is not implemented, then sending institutions will
-                                    need to resolve to pulling fresh data from your Unbounded ToRs API quite often - this
-                                    method will increase both latency and the load on both servers.
+                                    It is HIGHLY RECOMMENDED for all EWP Hosts to implement
+                                    this feature. If it is not implemented, then sending institutions will need to
+                                    resolve to pulling fresh data from your ToRs API quite often - this method will
+                                    increase both latency and the load on both servers.
                                 </xs:documentation>
                             </xs:annotation>
                         </xs:element>

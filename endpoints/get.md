@@ -1,5 +1,5 @@
-Unbounded ToRs Get endpoint
-===========================
+Transcripts of Records Get endpoint
+===================================
 
 * [What is the status of this document?][statuses]
 * [See the index of all other EWP Specifications][develhub]

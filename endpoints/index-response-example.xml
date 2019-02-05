@@ -1,9 +1,9 @@
-<unbounded-tors-index-response
-    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/index-response.xsd"
+<tors-index-response
+    xmlns="https://github.com/erasmus-without-paper/ewp-specs-api-tors/blob/stable-v1/endpoints/index-response.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="
-         https://github.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/blob/stable-v1/endpoints/index-response.xsd
-         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-unbounded-tors/master/endpoints/index-response.xsd">
+         https://github.com/erasmus-without-paper/ewp-specs-api-tors/blob/stable-v1/endpoints/index-response.xsd
+         https://raw.githubusercontent.com/erasmus-without-paper/ewp-specs-api-tors/master/endpoints/index-response.xsd">
 
     <tor-info>
         <tor-id>16987hed-283d-5474-fs85-123s5df423d5d</tor-id>
@@ -29,4 +29,4 @@
         </student>
     </tor-info>
 
-</unbounded-tors-index-response>
+</tors-index-response>
