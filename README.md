@@ -9,17 +9,30 @@ Summary
 -------
 
 This document describes the **Transcripts of Records API**.
-This API is implemented by the receiving institution. It allows the sending
-institution to retrieve Transcripts of Records issued by the receiving
-institution.
+This API is implemented by the receiving institution.
+It allows the sending institution to retrieve Transcripts of Records issued by the receiving institution.
 
-The transcript in this API is identified by its own identifier
-(in opposite to the [Incoming Mobility ToRs API][imobilitiy-tors-api],
-where it is identified by the mobility id). This allows to send transcripts
-without former exchange of mobilities via [Outgoing Mobilities API][omobilities-api].
+The transcript in this API has its own identifier, created by the receiving institution.
+This allows to send transcripts without former exchange of mobilities via [Outgoing Mobilities API][omobilities-api].
 
 Note that all the transcripts that we write about here are actually related to student mobilities.
-They are only being sent without the context of the mobility.
+
+
+Transcripts of Records API vs. Incoming Mobility Transcripts of Records API
+---------------------------------------------------------------------------
+
+We have also another API, which allows to send transcripts - [Incoming Mobility Transcripts of Records API][imobilitiy-tors-api].
+In that API, the transcript is identified by the mobility id - the one assigned by the sending institution.
+This means, that [Incoming Mobility ToRs API][imobilitiy-tors-api] can be used only for those mobilities,
+which have been exchanged via [Outgoing Mobilities API][omobilities-api] before.
+
+If the institution implements both ToR APIs, **one transcript of records can be accessed in two ways**.
+However, if the mobility has been exchanged via [Outgoing Mobilities API][omobilities-api],
+the [Incoming Mobility Transcripts of Records API][imobilitiy-tors-api] should be the preferred way,
+as the caller can there easily and unambiguously (maybe even automatically) match the transcript with the mobility and the student.
+
+Note that all the transcripts exchanged via Transcript of Records API are actually related to student mobilities as well.
+In this API they are only being sent without the context of the mobility.
 
 
 Security and permissions
